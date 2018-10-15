@@ -1,0 +1,26 @@
+<!--
+  Generated template for the GaleriaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Galeria</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-content>
+    <ion-item *ngFor="let g of galeria">
+      <ion-item-divider color="light">{{g.id}}</ion-item-divider>
+      <ion-item>{{g.titulo}}</ion-item>
+      <ion-item>{{g.descricao}}</ion-item>
+      <img src="../../assets/imgs/{{g.imagem}}" width="20%" alt="gt710">
+      <ion-item (click)="navFotoDetalhe(g)">Detalhe</ion-item>
+    </ion-item>
+  </ion-content>
+</ion-content>
