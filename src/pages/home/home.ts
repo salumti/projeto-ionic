@@ -11,7 +11,7 @@ export class HomePage {
 
   }
   login(){
-    this.navCtrl.setRoot('GaleriaPage');
+    this.navCtrl.setRoot('InicioPage');
   }
 
  
