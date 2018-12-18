@@ -13,3 +13,23 @@ ion-content ion-slides ion-slide p{
     font-size: 100%;
     text-shadow: black 0.1em 0.1em 0.1em;
 }
+
+.card-background-page {
+
+    ion-card {
+      position: relative;
+      text-align: center;
+    }
+  
+    .card-title {
+      position: absolute;
+      top: 36%;
+      font-size: 2.0em;
+      width: 100%;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 1px 1px 1px #000;
+    }
+  
+  
+  }
