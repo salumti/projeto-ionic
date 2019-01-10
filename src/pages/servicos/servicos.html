@@ -7,7 +7,10 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Servicos</ion-title>
+    <button ion-button menuToggle right>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Serviços</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -16,34 +19,34 @@
   <ion-list>
 
     <ion-item>
-      <p>Espaço</p>
+      <button ion-button block (click)="espaco()">Espaço</button>
     </ion-item>
     <ion-item>
-      <p>Buffet</p>
+      <button ion-button block (click)="buffet()">Buffet</button>
     </ion-item>
     <ion-item>
-      <p>Ornamentação</p>
+      <button ion-button block (click)="ornamentacao()">Ornamentação</button>
     </ion-item>
     <ion-item>
-      <p>DJ</p>
+      <button ion-button block (click)="dj()">DJ</button>
     </ion-item>
     <ion-item>
-        <p>Mestre de Cerimônias</p>
+      <button ion-button block (click)="mc()">Mestre de Cerimônias</button>
     </ion-item>
     <ion-item>
-      <p>Lista de Convidados</p>
+      <button ion-button block (click)="listadeConvidados()">Lista de Convidados</button>
     </ion-item>
     <ion-item>
-      <p>Lista de Presentes</p>
+      <button ion-button block (click)="listadePresentes()">Lista de Presentes</button>
     </ion-item>
     <ion-item>
-      <p>Colaboração Mútua</p>
+      <button ion-button block (click)="colaboracaoMutua()">Colaboração Mútua</button>
     </ion-item>
     <ion-item>
-      <p>Contato</p>
+      <button ion-button block (click)="contato()">Contato</button>
     </ion-item>
     <ion-item>
-      <p>Quem Somos</p>
+      <button ion-button block (click)="quemSomos()">Quem Somos</button>
     </ion-item>
   </ion-list>
 </ion-content>

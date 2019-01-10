@@ -21,5 +21,34 @@ export class ServicosPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ServicosPage');
   }
-
+  espaco(){
+    this.navCtrl.push('EspacoPage');
+  }
+  buffet(){
+    this.navCtrl.push('BuffetPage');
+  }
+  ornamentacao(){
+    this.navCtrl.push('OrnamentacaoPage');
+  }
+  dj(){
+    this.navCtrl.push('DjPage');
+  }
+  mc(){
+    this.navCtrl.push('MestreDeCerimoniasPage');
+  }
+  listadeConvidados(){
+    this.navCtrl.push('ListaDeConvidadosPage');
+  }
+  listadePresentes(){
+    this.navCtrl.push('ListaDePresentesPage');
+  }
+  colaboracaoMutua(){
+    this.navCtrl.push('ColaboracaoMutuaPage');
+  }
+  contato(){
+    this.navCtrl.push('ContatoPage');
+  }
+  quemSomos(){
+    this.navCtrl.push('QuemSomosPage');
+  }
 }

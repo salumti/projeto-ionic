@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the InicioPage page.
+ * Generated class for the ListaDeConvidadosPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,24 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-inicio',
-  templateUrl: 'inicio.html',
+  selector: 'page-lista-de-convidados',
+  templateUrl: 'lista-de-convidados.html',
 })
-export class InicioPage {
+export class ListaDeConvidadosPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad InicioPage');
+    console.log('ionViewDidLoad ListaDeConvidadosPage');
   }
-  dj(){
-    this.navCtrl.push('DjPage');
-  }
-  salao(){
-    this.navCtrl.push('EspacoPage');
-  }
-  buffet(){
-    this.navCtrl.push('BuffetPage');
-  }
+
 }

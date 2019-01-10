@@ -3,53 +3,32 @@
     <button ion-button menuToggle right>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title class="title">Inicio</ion-title>
+    <ion-title class="title">Top Party</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
-  <div>
-  <ion-slides pager class="slides">
 
-    <ion-slide>
-      <p>Organize sua festa</p>
-      <img src="https://ideiasesabores.com.br/wp-content/uploads/2018/11/brinde-festa-fim-de-ano-na-empresa-1200x675.jpg">
-    </ion-slide>
-
-    <ion-slide>
-      
-      <img src="http://multifestas.com.br/content/uploads/2016/06/festa.jpg">
-    </ion-slide>
-
-    <ion-slide>
-      <p>Faça sua festa de 15 anos</p>
-      <img src="http://www.custumizu.com.br/wp-content/uploads/2015/10/15A5.jpg">
-    </ion-slide>
-
-  </ion-slides>
-</div>
-<h2 style="text-align:center;">Serviços</h2>
-
-
+  
     <ion-content class="card-background-page">
 
-        <ion-card>
+        <ion-card><a (click)="dj()">
           <img src="https://i0.wp.com/www.fatosdesconhecidos.com.br/wp-content/uploads/2016/07/big_cd_cover.jpg?resize=900,420"/>
           <div class="card-title">DJ</div>
-          
+        </a>
         </ion-card>
       
-        <ion-card>
+        <ion-card><a (click)="espaco()">
           <img src="http://www.suaobra.com.br/uploads/dicas/l4XJdUJdC0.jpeg"/>
-          <div class="card-title">Salão</div>
-          
+          <div class="card-title">Espaço</div>
+        </a>
         </ion-card>
       
-        <ion-card>
+        <ion-card><a (click)="buffet()">
           <img src="http://buffetstyllus.com.br/site/wp-content/uploads/2015/03/@home_destaqueOK.jpg"/>
           <div class="card-title">Buffet</div>
-          
+        </a>
         </ion-card>
             
       </ion-content>
