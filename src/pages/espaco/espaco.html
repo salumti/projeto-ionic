@@ -7,12 +7,34 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Espaço</ion-title>
+    <ion-title>Espaços</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="card-background-page">
+
+  <ion-card>
+    <a (click)="espaco1()">
+      <img src="http://www.suaobra.com.br/uploads/dicas/l4XJdUJdC0.jpeg" />
+      <div class="card-title">Salão Divino</div>
+    </a>
+  </ion-card>
+  
+  <ion-card>
+    <a (click)="espaco2()">
+      <img src="https://www.filippodj.com.br/wp-content/uploads/2016/04/02_MUSEU-HIST%C3%93RICO-1024x683.jpg" />
+      <div class="card-title">Espaço da Diversão</div>
+    </a>
+  </ion-card>
+
+
+  <ion-card>
+    <a (click)="espaco3()">
+      <img src="http://www.alinemachado.com.br/14_01_12%20Paula%20e%20Roberto%20BLOG/BLOG%2013%20PAULA%20E%20ROBERTO.jpg" />
+      <div class="card-title">Salão Natureza</div>
+    </a>
+  </ion-card>
 
 </ion-content>

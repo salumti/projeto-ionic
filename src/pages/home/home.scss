@@ -7,3 +7,18 @@ a{
 p{
    color: white;
 }
+page-home ion-content{    
+    padding: 0px;
+    background-image: url('https://i.pinimg.com/originals/bb/91/6d/bb916dacba1500a09bae3913f047a696.jpg');
+    background-size: cover;
+}
+
+page-home ion-content form ion-item{
+   opacity: 0.5;
+}
+page-home ion-content form ion-item ion-label b{
+    opacity: 1;
+    color: rgba(0, 17, 255, 0.692);
+    font-size: 150%;
+    text-shadow: 1px 1px 1px rgba(144, 123, 236, 0.253);
+}

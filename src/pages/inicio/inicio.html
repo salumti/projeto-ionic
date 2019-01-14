@@ -8,29 +8,27 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="card-background-page">
 
-  
-    <ion-content class="card-background-page">
+  <ion-card>
+    <a (click)="dj()">
+      <img src="https://i0.wp.com/www.fatosdesconhecidos.com.br/wp-content/uploads/2016/07/big_cd_cover.jpg?resize=900,420" />
+      <div class="card-title">DJ</div>
+    </a>
+  </ion-card>
 
-        <ion-card><a (click)="dj()">
-          <img src="https://i0.wp.com/www.fatosdesconhecidos.com.br/wp-content/uploads/2016/07/big_cd_cover.jpg?resize=900,420"/>
-          <div class="card-title">DJ</div>
-        </a>
-        </ion-card>
-      
-        <ion-card><a (click)="espaco()">
-          <img src="http://www.suaobra.com.br/uploads/dicas/l4XJdUJdC0.jpeg"/>
-          <div class="card-title">Espaço</div>
-        </a>
-        </ion-card>
-      
-        <ion-card><a (click)="buffet()">
-          <img src="http://buffetstyllus.com.br/site/wp-content/uploads/2015/03/@home_destaqueOK.jpg"/>
-          <div class="card-title">Buffet</div>
-        </a>
-        </ion-card>
-            
-      </ion-content>
+  <ion-card>
+    <a (click)="espaco()">
+      <img src="http://www.suaobra.com.br/uploads/dicas/l4XJdUJdC0.jpeg" />
+      <div class="card-title">Espaço</div>
+    </a>
+  </ion-card>
+
+  <ion-card>
+    <a (click)="buffet()">
+      <img src="http://buffetstyllus.com.br/site/wp-content/uploads/2015/03/@home_destaqueOK.jpg" />
+      <div class="card-title">Buffet</div>
+    </a>
+  </ion-card>
 
 </ion-content>

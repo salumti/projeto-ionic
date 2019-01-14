@@ -2,8 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
-
+import { AngularFireAuth } from 'angularfire2/auth';
 
 
 @Component({
@@ -16,14 +15,17 @@ export class MyApp {
 
   pages: Array<{title: string, component: string}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform,
+    public statusBar: StatusBar,
+    public splashScreen: SplashScreen,
+    public firebaseAuth : AngularFireAuth) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Inicio', component: 'InicioPage' },
-      { title: 'Serviços', component: 'ServicosPage' }
-      
+      { title: 'Serviços', component: 'ServicosPage' },
+      { title: 'Sair', component: 'SairPage' }      
     ];
 
   }
@@ -35,6 +37,18 @@ export class MyApp {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+    
+    this.firebaseAuth.authState.subscribe(
+      user => {
+        if(user){
+          this.rootPage = 'InicioPage';
+        }else{
+          this.rootPage = 'HomePage';
+        }
+      }, () =>{
+        this.rootPage = 'HomePage';
+      }
+    );
   }
 
   openPage(page) {

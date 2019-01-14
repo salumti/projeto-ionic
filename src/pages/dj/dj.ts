@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Dj } from '../../model/dj';
+import { DjService } from '../../services/dj.service';
 
 /**
  * Generated class for the DjPage page.
@@ -15,11 +17,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DjPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  dj : Dj[];
+
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams,
+    public DjService : DjService) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DjPage');
+  ionViewDidLoad(){
+    this.DjService.getDj()
+    .subscribe(response => {
+      this.dj = response;
+      console.log(this.dj);
+    });
   }
-
+  navDjDetalhe(dj : Dj){
+    this.navCtrl.push("DjDetalhePage",{dj : dj});
+  }
 }

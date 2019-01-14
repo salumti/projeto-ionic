@@ -3,32 +3,38 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-
+import { AngularFireModule } from '@angular/fire';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { FIREBASECONFIG } from '../config/firebase.config';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { StorageService } from '../services/storage.service';
+import { DjService } from '../services/dj.service';
 
 @NgModule({
   declarations: [
-    MyApp
-    
-  
+    MyApp  
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpClientModule,
+    AngularFireModule.initializeApp(FIREBASECONFIG)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp
-    
-    
+    MyApp    
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AngularFireAuth,
+    StorageService,
+    DjService
   ]
 })
 export class AppModule {}

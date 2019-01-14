@@ -14,5 +14,17 @@
 
 
 <ion-content padding>
-
+<ion-content class="card-background-page">
+  <ion-card *ngFor="let d of dj" (click)="navDjDetalhe(d)">
+    <img src="{{d.img}}"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{d.nome}}
+        </ion-card-title>
+      <p>
+        {{d.preco}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
 </ion-content>
