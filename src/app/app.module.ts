@@ -13,6 +13,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { StorageService } from '../services/storage.service';
 import { DjService } from '../services/dj.service';
+import { BuffetService } from '../services/buffet.service';
+import { OrnamentacaoService } from '../services/ornamentacao.service';
+import { McService } from '../services/mc.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { DjService } from '../services/dj.service';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AngularFireAuth,
     StorageService,
-    DjService
+    DjService,
+    BuffetService,
+    OrnamentacaoService,
+    McService
   ]
 })
 export class AppModule {}

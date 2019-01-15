@@ -14,5 +14,18 @@
 
 
 <ion-content padding>
-
-</ion-content>
+  <ion-content class="card-background-page">
+    <ion-card *ngFor="let o of ornamentacao" (click)="navOrnamentacaoDetalhe(b)">
+      <img src="{{o.img}}"/>
+      <ion-card-content>
+        <ion-card-title>
+          {{o.nome}}
+          </ion-card-title>
+        <p>
+          {{o.preco}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+  </ion-content>
+  

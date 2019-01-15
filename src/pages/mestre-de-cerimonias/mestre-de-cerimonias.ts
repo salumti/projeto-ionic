@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Mc } from '../../model/mestre-de-cerimonias';
+import { McService } from '../../services/mc.service';
 
 /**
  * Generated class for the MestreDeCerimoniasPage page.
@@ -15,11 +17,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MestreDeCerimoniasPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  mc : Mc[];
+
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams,
+    public McService : McService) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MestreDeCerimoniasPage');
+  ionViewDidLoad(){
+    this.McService.getMc()
+    .subscribe(response => {
+      this.mc = response;
+      console.log(this.mc);
+    });
   }
-
+  navMcDetalhe(mc : Mc){
+    this.navCtrl.push("McDetalhePage",{mc : mc});
+  }
 }

@@ -11,7 +11,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: string = 'HomePage';
+  rootPage: string = 'ContatoPage';
 
   pages: Array<{title: string, component: string}>;
 

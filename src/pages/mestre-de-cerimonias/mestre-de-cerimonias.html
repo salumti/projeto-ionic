@@ -14,5 +14,18 @@
 
 
 <ion-content padding>
-
-</ion-content>
+  <ion-content class="card-background-page">
+    <ion-card *ngFor="let m of mc" (click)="navMcDetalhePage(b)">
+      <img src="{{m.img}}"/>
+      <ion-card-content>
+        <ion-card-title>
+          {{m.nome}}
+          </ion-card-title>
+        <p>
+          {{m.preco}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+  </ion-content>
+  

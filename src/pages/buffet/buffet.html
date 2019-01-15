@@ -12,7 +12,19 @@
 
 </ion-header>
 
-
 <ion-content padding>
-
-</ion-content>
+  <ion-content class="card-background-page">
+    <ion-card *ngFor="let b of buffet" (click)="navBuffetDetalhe(b)">
+      <img src="{{b.img}}"/>
+      <ion-card-content>
+        <ion-card-title>
+          {{b.nome}}
+          </ion-card-title>
+        <p>
+          {{b.preco}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+  </ion-content>
+  
